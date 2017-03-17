@@ -1,0 +1,174 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Almog} % Your first name
+\familyname{Kurtser} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Ha'atsmaut 45}{Even Yehuda, 4050315 Israel}
+\mobile{(+972) 52 3630950}
+\email{akurtser@gmail.com}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[70pt][4pt]{pictures/almog} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+\clearpage
+
+\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear Sir or Madam,} % Opening greeting
+\closing{Sincerely yours,} % Closing phrase
+\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+\makelettertitle % Print letter title
+
+\lipsum[1-2] % Dummy text
+\lipsum[4] % Dummy text
+
+\makeletterclosing % Print letter signature
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2009--2011}{Computer Science and Mathematics}{The Open University of Israel}{}{}{}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\cventry{2011--Present}{Software Developer}{\textsc{Klarna}}{Tel Aviv}{}{
+  Built operated and maintained high availability consumer and merchants facing applications deployed over multiple (AWS) regions.
+  Scrum and Kanban teams of 3-12 people
+  TDD
+  Continuous delivery
+\newline{}\newline{}
+Detailed achievements:
+\begin{itemize}
+  \item Worked on Klarna's largest consumer facing system which started as a classic RoR and evolved into a \textsc{React} Single Page App + \textsc{Rails} backed API, serving and aggregating content from dozens of microservices.
+  \item Built and maintained Klarna's merchants ordering management system using Rails, Sinatra (API + OAuth 2) and Solr.
+  \item Klarna's first non-manual merchants onboarding system
+\end{itemize}}
+
+%------------------------------------------------
+\cventry{2007--2009}{Software Developer}{\textsc{Kaltura}}{Ramat Gan}{}{ Joined as the 4th developer, built Flex \& Flash video editing, management and streaming platform as well as \textsc{Python} based automation tools. }
+%------------------------------------------------
+\cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Converted a polling based \textsc{Flash} game platform to use Sockets. }
+%------------------------------------------------
+\cventry{2003--2006}{Criminal Investigator}{The Central Unit for Special Investigations}{\textsc{IDF} (mandatory regular service)}{Military Police}{Leading dozens of investigations of different crimes (frauds, thefts, weapons dealership, drugs and violence).
+}
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Presentations}
+
+\cvitem{2017}{Git Under The Hood}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Software Devlopment skills}
+
+\cvitem{Basic}{\textsc{Haskell}, \LaTeX, \textsc{Postgres}, \textsc{React}, \textsc{clojure}}
+\cvitem{Intermediate}{\textsc{Javascript}, \textsc{Linux}, \textsc{Chef}, \textsc{Vim}}
+\cvitem{Advanced}{\textsc{Ruby}, \textsc{Git}}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Mothertongue}{}
+\cvitemwithcomment{Hebrew}{Mothertongue}{}
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEERING SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Volunteering}
+\cvitemwithcomment{2014-present}{Herzelia Loves Animals}{Rescuing, fostering and finding stray dogs new homes}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Bread baking}{Cooking}
+\cvlistdoubleitem{UL Backpacking}{Running}
+\cvlistitem{Fantasy \& Sci-Fi}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
