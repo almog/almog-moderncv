@@ -32,6 +32,14 @@
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
 \usepackage[scale=0.75]{geometry} % Reduce document margins
+
+\newenvironment{verse}
+\renewcommand{\poemtitlefont}{\normalfont\large\itshape\centering}
+\usepackage{verse}
+
+\newcommand{\attrib}[1]{%
+\nopagebreak{\raggedleft\footnotesize #1\par}}
+
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
@@ -44,17 +52,58 @@
 
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vitae}
-\address{Ha'atsmaut 45}{Even Yehuda, 4050315 Israel}
+\address{P.O Box 135}{Even Yehuda, 4050315 Israel}
 \mobile{(+972) 52 3630950}
 \email{akurtser@gmail.com}
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\extrainfo{additional information}
 \photo[70pt][4pt]{pictures/almog} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-\quote{"A witty and playful quotation" - John Smith}
+\quote{"I actually think that I'm a rather optimistic and happy person; it's just that I'm not a very positive person, if you see the difference." - Linus Trovalds\newline{}}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+
+%\poemtitle{Writing Curriculum Vitae}
+%\settowidth{\versewidth}{and enclose a Curriculum Vitae.}
+%\begin{verse}[\versewidth]
+%
+%What must you do? \\
+%You must submit an application \\
+%and enclose a Curriculum Vitae. \\
+%
+%Regardless of how long your life is, \\
+%the Curriculum Vitae should be short. \\
+%
+%Be concise, select facts. \\
+%Change landscapes into addresses \\
+%and vague memories into fixed dates. \\
+%
+%Of all your loves, mention only the marital, \\
+%and of the children, only those who were born. \\
+%
+%It's more important who knows you \\
+%than whom you know. \\
+%Travels-only if abroad. \\
+%Affiliations-to what, not why. \\
+%Awards-but not for what. \\
+%
+%Write as if you never talked with yourself, \\
+%as if you looked at yourself from afar. \\
+% 
+%Omit dogs, cats, and birds, \\
+%mementos, friends, dreams. \\
+%State price rather than value, \\
+%title rather than content. \\
+%Shoe size, not where one is going, \\
+%the one you are supposed to be. \\
+%Enclose a photo with one ear showing. \\
+%What counts is its shape, not what it hears. \\
+%
+%What does it hear?
+%\end{verse}
+%\attrib{Wislawa Szymborska (1923--2012)}
+
 
 %----------------------------------------------------------------------------------------
 %	COVER LETTER
@@ -62,36 +111,28 @@
 
 % To remove the cover letter, comment out this entire block
 
-\clearpage
+% \clearpage
+% 
+% \recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+% \date{\today} % Letter date
+% \opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Sincerely yours,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+% 
+% \makelettertitle % Print letter title
+% 
+% \lipsum[4] % Dummy text
+% 
+% \makeletterclosing % Print letter signature
+% 
+% \newpage
 
-\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-\date{\today} % Letter date
-\opening{Dear Sir or Madam,} % Opening greeting
-\closing{Sincerely yours,} % Closing phrase
-\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-
-\makelettertitle % Print letter title
-
-\lipsum[1-2] % Dummy text
-\lipsum[4] % Dummy text
-
-\makeletterclosing % Print letter signature
-
-\newpage
 
 %----------------------------------------------------------------------------------------
 %	CURRICULUM VITAE
 %----------------------------------------------------------------------------------------
 
 \makecvtitle % Print the CV title
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Education}
-
-\cventry{2009--2011}{Computer Science and Mathematics}{The Open University of Israel}{}{}{}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -101,25 +142,28 @@
 
 \cventry{2011--Present}{Software Developer}{\textsc{Klarna}}{Tel Aviv}{}{
   Built operated and maintained high availability consumer and merchants facing applications deployed over multiple (AWS) regions.
-  Scrum and Kanban teams of 3-12 people
-  TDD
-  Continuous delivery
+  Worked in a variety of independent full-stack agile teams, that engage in an everyday pair programming, thorough code-reviews, extensive test suite and automation that result in continuous delivery of high quality software.
 \newline{}\newline{}
 Detailed achievements:
 \begin{itemize}
-  \item Worked on Klarna's largest consumer facing system which started as a classic RoR and evolved into a \textsc{React} Single Page App + \textsc{Rails} backed API, serving and aggregating content from dozens of microservices.
+  \item Worked on Klarna's largest consumer facing system which started as a classic RoR and evolved into a \textsc{React} Single Page App + \textsc{Rails} backed API, serving and aggregating content from more than a doezen microservices.
   \item Built and maintained Klarna's merchants ordering management system using Rails, Sinatra (API + OAuth 2) and Solr.
-  \item Klarna's first non-manual merchants onboarding system
+  \item Klarna's first non-manual merchants onboarding system.
 \end{itemize}}
 
-%------------------------------------------------
 \cventry{2007--2009}{Software Developer}{\textsc{Kaltura}}{Ramat Gan}{}{ Joined as the 4th developer, built Flex \& Flash video editing, management and streaming platform as well as \textsc{Python} based automation tools. }
-%------------------------------------------------
 \cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Converted a polling based \textsc{Flash} game platform to use Sockets. }
-%------------------------------------------------
 \cventry{2003--2006}{Criminal Investigator}{The Central Unit for Special Investigations}{\textsc{IDF} (mandatory regular service)}{Military Police}{Leading dozens of investigations of different crimes (frauds, thefts, weapons dealership, drugs and violence).
 }
 %------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2009--2011}{Computer Science and Mathematics}{The Open University of Israel}{}{}{}
 
 
 %----------------------------------------------------------------------------------------
@@ -136,8 +180,8 @@ Detailed achievements:
 
 \section{Software Devlopment skills}
 
-\cvitem{Basic}{\textsc{Haskell}, \LaTeX, \textsc{Postgres}, \textsc{React}, \textsc{clojure}}
-\cvitem{Intermediate}{\textsc{Javascript}, \textsc{Linux}, \textsc{Chef}, \textsc{Vim}}
+\cvitem{Basic}{\textsc{Haskell}, \LaTeX, \textsc{Postgres}, \textsc{React}, \textsc{clojure}, \textsc{Docker}}
+\cvitem{Intermediate}{\textsc{Javascript}, \textsc{Node.js}, \textsc{Linux}, \textsc{Chef}, \textsc{Vim}, \textsc{Jenkins}}
 \cvitem{Advanced}{\textsc{Ruby}, \textsc{Git}}
 
 %----------------------------------------------------------------------------------------
@@ -148,13 +192,14 @@ Detailed achievements:
 
 \cvitemwithcomment{English}{Mothertongue}{}
 \cvitemwithcomment{Hebrew}{Mothertongue}{}
+\cvitemwithcomment{Swedish}{Can order wine of your selection}{}
 
 %----------------------------------------------------------------------------------------
 %	VOLUNTEERING SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Volunteering}
-\cvitemwithcomment{2014-present}{Herzelia Loves Animals}{Rescuing, fostering and finding stray dogs new homes}
+\cvitemwithcomment{2014-present}{Herzelia Loves Animals}{Rescuing, fostering and finding new homes for stray dogs}
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
@@ -166,7 +211,7 @@ Detailed achievements:
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
 \cvlistdoubleitem{Bread baking}{Cooking}
-\cvlistdoubleitem{UL Backpacking}{Running}
+\cvlistdoubleitem{UL Backpacking}{Trail Running}
 \cvlistitem{Fantasy \& Sci-Fi}
 
 %----------------------------------------------------------------------------------------
