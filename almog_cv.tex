@@ -58,51 +58,55 @@
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\extrainfo{additional information}
 \photo[70pt][4pt]{pictures/almog} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-\quote{"I actually think that I'm a rather optimistic and happy person; it's just that I'm not a very positive person, if you see the difference." - Linus Trovalds\newline{}}
+%\quote{"I actually think that I'm a rather optimistic and happy person; it's just that I'm not a very positive person, if you see the difference." - Linus Trovalds\newline{}}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-%\poemtitle{Writing Curriculum Vitae}
-%\settowidth{\versewidth}{and enclose a Curriculum Vitae.}
-%\begin{verse}[\versewidth]
-%
-%What must you do? \\
-%You must submit an application \\
-%and enclose a Curriculum Vitae. \\
-%
-%Regardless of how long your life is, \\
-%the Curriculum Vitae should be short. \\
-%
-%Be concise, select facts. \\
-%Change landscapes into addresses \\
-%and vague memories into fixed dates. \\
-%
-%Of all your loves, mention only the marital, \\
-%and of the children, only those who were born. \\
-%
-%It's more important who knows you \\
-%than whom you know. \\
-%Travels-only if abroad. \\
-%Affiliations-to what, not why. \\
-%Awards-but not for what. \\
-%
-%Write as if you never talked with yourself, \\
-%as if you looked at yourself from afar. \\
-% 
-%Omit dogs, cats, and birds, \\
-%mementos, friends, dreams. \\
-%State price rather than value, \\
-%title rather than content. \\
-%Shoe size, not where one is going, \\
-%the one you are supposed to be. \\
-%Enclose a photo with one ear showing. \\
-%What counts is its shape, not what it hears. \\
-%
-%What does it hear?
-%\end{verse}
-%\attrib{Wislawa Szymborska (1923--2012)}
+\poemtitle{Writing Curriculum Vitae}
+
+\settowidth{\versewidth}{and enclose a Curriculum Vitae.}
+\begin{verse}[\versewidth]
+
+What must you do? \\
+You must submit an application \\
+and enclose a Curriculum Vitae.
+
+Regardless of how long your life is, \\
+the Curriculum Vitae should be short.
+
+Be concise, select facts. \\
+Change landscapes into addresses \\
+and vague memories into fixed dates.
+
+Of all your loves, mention only the marital, \\
+and of the children, only those who were born.
+
+It's more important who knows you \\
+than whom you know. \\
+Travels-only if abroad. \\
+Affiliations-to what, not why. \\
+Awards-but not for what.
+
+Write as if you never talked with yourself, \\
+as if you looked at yourself from afar.
+ 
+Omit dogs, cats, and birds, \\
+mementos, friends, dreams.
+
+State price rather than value, \\
+title rather than content. \\
+Shoe size, not where one is going, \\
+the one you are supposed to be.
+
+Enclose a photo with one ear showing. \\
+What counts is its shape, not what it hears.
+
+What does it hear? \\
+The clatter of machinery that shreds paper.
+\end{verse}
+\attrib{Wislawa Szymborska (1923--2012)}
 
 
 %----------------------------------------------------------------------------------------
@@ -111,21 +115,21 @@
 
 % To remove the cover letter, comment out this entire block
 
-% \clearpage
-% 
-% \recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-% \date{\today} % Letter date
-% \opening{Dear Sir or Madam,} % Opening greeting
-% \closing{Sincerely yours,} % Closing phrase
-% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-% 
-% \makelettertitle % Print letter title
-% 
-% \lipsum[4] % Dummy text
-% 
-% \makeletterclosing % Print letter signature
-% 
-% \newpage
+%\clearpage
+%
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+%
+%\makelettertitle % Print letter title
+%
+%\lipsum[4] % Dummy text
+%
+%\makeletterclosing % Print letter signature
+%
+%\newpage
 
 
 %----------------------------------------------------------------------------------------
@@ -141,19 +145,18 @@
 \section{Experience}
 
 \cventry{2011--Present}{Software Developer}{\textsc{Klarna}}{Tel Aviv}{}{
-  Built operated and maintained high availability consumer and merchants facing applications deployed over multiple (AWS) regions.
-  Worked in a variety of independent full-stack agile teams, that engage in an everyday pair programming, thorough code-reviews, extensive test suite and automation that result in continuous delivery of high quality software.
-\newline{}\newline{}
-Detailed achievements:
+  Built operated and maintained applications and backend services used by millions of consumers and many thousands of merchants:
 \begin{itemize}
-  \item Worked on Klarna's largest consumer facing system which started as a classic RoR and evolved into a \textsc{React} Single Page App + \textsc{Rails} backed API, serving and aggregating content from more than a doezen microservices.
-  \item Built and maintained Klarna's merchants ordering management system using Rails, Sinatra (API + OAuth 2) and Solr.
-  \item Klarna's first non-manual merchants onboarding system.
+  \item Real-time data-enrichment service running on \textsc{Node.js}, processing ~1M jobs/day.
+    CI/CD pipelines based on \textsc{Jenkins}, real-time monitoring with \textsc{Graphite}/\textsc{Grafana}, deployed with \textsc{Docker} on AWS.
+  \item Klarna's largest consumer facing system - started as a classic RoR and evolved into a \textsc{React} Single Page App + \textsc{Rails} backed API, serving and aggregating content dozens of microservices.
+  \item Merchants order management system based on \textsc{Rails}, \textsc{Sinatra} (for API + OAuth 2) and a \textsc{Solr} search server.
+  \item Klarna's first non-manual (manual as in faxes!) merchants onboarding system.
 \end{itemize}}
 
-\cventry{2007--2009}{Software Developer}{\textsc{Kaltura}}{Ramat Gan}{}{ Joined as the 4th developer, built Flex \& Flash video editing, management and streaming platform as well as \textsc{Python} based automation tools. }
-\cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Converted a polling based \textsc{Flash} game platform to use Sockets. }
-\cventry{2003--2006}{Criminal Investigator}{The Central Unit for Special Investigations}{\textsc{IDF} (mandatory regular service)}{Military Police}{Leading dozens of investigations of different crimes (frauds, thefts, weapons dealership, drugs and violence).
+\cventry{2007--2009}{Software Developer}{\textsc{Kaltura}}{Ramat Gan}{}{Joined as the 4th developer, built video editing, management and streaming platform as well as \textsc{Python} based automation tools. }
+\cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Migrated an http polling based \textsc{Flash} gaming platform to work with Sockets against a Java EE backend }
+\cventry{2003--2006}{Criminal Investigator \& Computer Forensics Analyst}{The Central Unit for Special Investigations}{\textsc{IDF} (mandatory regular service)}{Military Police}{Leading dozens of investigations of different crimes (frauds, thefts, weapons dealership, drugs and violence).
 }
 %------------------------------------------------
 
@@ -180,8 +183,8 @@ Detailed achievements:
 
 \section{Software Devlopment skills}
 
-\cvitem{Basic}{\textsc{Haskell}, \LaTeX, \textsc{Postgres}, \textsc{React}, \textsc{clojure}, \textsc{Docker}}
-\cvitem{Intermediate}{\textsc{Javascript}, \textsc{Node.js}, \textsc{Linux}, \textsc{Chef}, \textsc{Vim}, \textsc{Jenkins}}
+\cvitem{Basic}{\textsc{Haskell}, \LaTeX, \textsc{Postgres}, \textsc{React}}
+\cvitem{Intermediate}{\textsc{Javascript}, \textsc{Node.js}, \textsc{Linux}, \textsc{Vim}, \textsc{Jenkins}, \textsc{Docker}, \textsc{Chef}}
 \cvitem{Advanced}{\textsc{Ruby}, \textsc{Git}}
 
 %----------------------------------------------------------------------------------------
@@ -192,7 +195,7 @@ Detailed achievements:
 
 \cvitemwithcomment{English}{Mothertongue}{}
 \cvitemwithcomment{Hebrew}{Mothertongue}{}
-\cvitemwithcomment{Swedish}{Can order wine of your selection}{}
+\cvitemwithcomment{Swedish}{Just enough to order wine of your selection}{}
 
 %----------------------------------------------------------------------------------------
 %	VOLUNTEERING SECTION
@@ -211,7 +214,7 @@ Detailed achievements:
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
 \cvlistdoubleitem{Bread baking}{Cooking}
-\cvlistdoubleitem{UL Backpacking}{Trail Running}
+\cvlistdoubleitem{Looong distance hiking}{Trail running}
 \cvlistitem{Fantasy \& Sci-Fi}
 
 %----------------------------------------------------------------------------------------
