@@ -1,2 +1,3 @@
 default:
-	pdflatex almog_cv.tex
+	docker pull "blang/latex"
+	./dockercmd pdflatex ./almog_cv.tex
