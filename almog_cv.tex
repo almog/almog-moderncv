@@ -37,6 +37,7 @@
 \newenvironment{verse}
 \renewcommand{\poemtitlefont}{\normalfont\large\itshape\centering}
 \usepackage{verse}
+\usepackage{ifthen}
 
 \newcommand{\attrib}[1]{%
 \nopagebreak{\raggedleft\footnotesize #1\par}}
@@ -62,52 +63,70 @@
 %\quote{"I actually think that I'm a rather optimistic and happy person; it's just that I'm not a very positive person, if you see the difference." - Linus Trovalds\newline{}}
 
 %----------------------------------------------------------------------------------------
+\ifxetex
+  \usepackage{catchfile}
+  \newcommand\getenv[2][]{%
+    \immediate\write18{kpsewhich --var-value #2 > \jobname.tmp}%
+    \CatchFileDef{\temp}{\jobname.tmp}{\endlinechar=-1}%
+    \ifx\temp\empty\def\temp{UNDEFINED}\fi
+    \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+\else
+    \usepackage{catchfile}
+    \newcommand{\getenv}[2][]{%
+      \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+      \ifx\temp\empty\def\temp{UNDEFINED}\fi
+      \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+\fi
 
 \begin{document}
 
-\poemtitle{Introduction}
+\getenv[\PRINTINTRODUCTION]{PRINTINTRODUCTION}
 
-\settowidth{\versewidth}{and enclose a Curriculum Vitae.}
-\begin{verse}[\versewidth]
-What must you do? \\
-You must submit an application \\
-and enclose a Curriculum Vitae.
+\ifthenelse{\equal{\PRINTINTRODUCTION}{true}}{
+  \poemtitle{Introduction}
 
-Regardless of how long your life is, \\
-the Curriculum Vitae should be short.
+  \settowidth{\versewidth}{and enclose a Curriculum Vitae.}
+  \begin{verse}[\versewidth]
+  What must you do? \\
+  You must submit an application \\
+  and enclose a Curriculum Vitae.
 
-Be concise, select facts. \\
-Change landscapes into addresses \\
-and vague memories into fixed dates.
+  Regardless of how long your life is, \\
+  the Curriculum Vitae should be short.
 
-Of all your loves, mention only the marital, \\
-and of the children, only those who were born.
+  Be concise, select facts. \\
+  Change landscapes into addresses \\
+  and vague memories into fixed dates.
 
-It's more important who knows you \\
-than whom you know. \\
-Travels -- only if abroad. \\
-Affiliations -- to what, not why. \\
-Awards -- but not for what.
+  Of all your loves, mention only the marital, \\
+  and of the children, only those who were born.
 
-Write as if you never talked with yourself, \\
-as if you looked at yourself from afar.
+  It's more important who knows you \\
+  than whom you know. \\
+  Travels -- only if abroad. \\
+  Affiliations -- to what, not why. \\
+  Awards -- but not for what.
 
-Omit dogs, cats, and birds, \\
-mementos, friends, dreams.
+  Write as if you never talked with yourself, \\
+  as if you looked at yourself from afar.
 
-State price rather than value, \\
-title rather than content. \\
-Shoe size, not where one is going, \\
-the one you are supposed to be.
+  Omit dogs, cats, and birds, \\
+  mementos, friends, dreams.
 
-Enclose a photo with one ear showing. \\
-What counts is its shape, not what it hears.
+  State price rather than value, \\
+  title rather than content. \\
+  Shoe size, not where one is going, \\
+  the one you are supposed to be.
 
-What does it hear? \\
-The clatter of machinery that shreds paper.
-\end{verse}
-\attrib{Writing Curriculum Vitae / Włslawa Szymborska (1923--2012)}
+  Enclose a photo with one ear showing. \\
+  What counts is its shape, not what it hears.
 
+  What does it hear? \\
+  The clatter of machinery that shreds paper.
+  \end{verse}
+  \attrib{Writing Curriculum Vitae / Włslawa Szymborska (1923--2012)}
+
+}
 
 %----------------------------------------------------------------------------------------
 %	COVER LETTER
