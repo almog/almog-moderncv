@@ -78,6 +78,29 @@
       \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
 \fi
 
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+%
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+%
+%\makelettertitle % Print letter title
+%
+%\lipsum[4] % Dummy text
+%
+%\makeletterclosing % Print letter signature
+%
+%\newpage
+\nopagenumbers % conditional rendering messes up with lastpage
+
 \begin{document}
 
 \getenv[\PRINTINTRODUCTION]{PRINTINTRODUCTION}
@@ -127,29 +150,6 @@
   \attrib{Writing Curriculum Vitae / Włslawa Szymborska (1923--2012)}
 
 }
-
-%----------------------------------------------------------------------------------------
-%	COVER LETTER
-%----------------------------------------------------------------------------------------
-
-% To remove the cover letter, comment out this entire block
-
-%\clearpage
-%
-%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-%\date{\today} % Letter date
-%\opening{Dear Sir or Madam,} % Opening greeting
-%\closing{Sincerely yours,} % Closing phrase
-%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-%
-%\makelettertitle % Print letter title
-%
-%\lipsum[4] % Dummy text
-%
-%\makeletterclosing % Print letter signature
-%
-%\newpage
-
 
 %----------------------------------------------------------------------------------------
 %	CURRICULUM VITAE
