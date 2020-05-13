@@ -59,7 +59,7 @@
 \email{akurtser@gmail.com}
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\extrainfo{additional information}
-\photo[70pt][4pt]{photos/almog} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\photo[60pt][4pt]{photos/almog} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"I actually think that I'm a rather optimistic and happy person; it's just that I'm not a very positive person, if you see the difference." - Linus Trovalds\newline{}}
 
 %----------------------------------------------------------------------------------------
@@ -148,9 +148,9 @@
   The clatter of machinery that shreds paper.
   \end{verse}
   \attrib{Writing Curriculum Vitae / Włslawa Szymborska (1923--2012)}
-
 }
 
+\newpage
 %----------------------------------------------------------------------------------------
 %	CURRICULUM VITAE
 %----------------------------------------------------------------------------------------
@@ -162,31 +162,34 @@
 %----------------------------------------------------------------------------------------
 
 
-\section{Recent (non-professional) deeds/follies}
-
-\cventry{05/2018--11/2019}{Thru-hiker}{\textsc{Pacific Crest Trail}}{USA}{}{
-Hiking 2,653 miles (4,270 km) from the U.S.--Mexico Border into Canada in continuous footpath.\\
+\section{Recent deeds/follies Following Klarna TLV shutdown}
+\cventry{05/2018--10/2019}{Thru-hiker}{\textsc{Pacific Crest Trail, INT, HRP}}{}{}{
+Hiking 2,653 miles (4,270 km) from the U.S.--Mexico Border into Canada in an unbroken-continuous-footpath.\\
 This hike took me through the states of California, Oregon, and Washington. \\
 By the end, I've climbed well over 489,418 feet in elevation through 25 National Forests and 7 National Parks. \\
-\newline
-Shortly after that, I hiked the 683 miles long Israel's National Trail followed by a 2019 semi-winter conditions traverse of the 500 miles long, Haute Route Pyreneese from the Atlantic Ocean to the Mediterranean Sea, being the last person to have started (and completed it) for that season in an unbroken continuous footpath.
+Shortly after that, I hiked the 683 mile long (1,100 km) Israel's National Trail.
+Last but not least I took on a semi-winter conditions traverse of the 500+ mile long Haute Randonnée Pyrénéenne (HRP),
+an unmarked high-route, stretching from the Atlantic to the Mediterranean.
+To the best of my knowledge, I've being the last person to have successfully started (and completed it) for that season in an unbroken-continuous-footpath.
 }
 
 \section{Experience}
 \cventry{11/2011--04/2018}{Software Developer}{\textsc{Klarna}}{Tel Aviv}{}{
   Developed, delivered, operated and maintained high quality software, used by millions of consumers and many thousands of merchants:
 \begin{itemize}
-  \item Built a real-time data-enrichment service that translates (textual) transactions to product images, processing ~1M jobs/day while handling wildly varying throughput with minimal latency. \\
-    Enabled by \textsc{Kafka} + \textsc{Node.js}, \textsc{Jenkins} CI/CD pipeline, real-time monitoring with \textsc{Graphite}/\textsc{Grafana}, deployed with \textsc{Docker} on AWS.
+  \item Built a (near) real-time data-enrichment service that matches partial textual transaction to categories and product images,
+    processing ~1M jobs/day while handling wildly varying throughput with minimal latency. \\
+    Enabled by \textsc{Kafka} + \textsc{Node.js}, \textsc{Jenkins} CI/CD pipeline, monitoring with \textsc{Graphite}/\textsc{Grafana}, deployed with \textsc{Docker} on AWS.
   \item Developed Klarna's largest consumer facing system - started as classic RoR and evolved into a \textsc{React} Single Page App + \textsc{Rails} backed API, serving and aggregating content from dozens of microservices.
   \item Designed and developed Klarna's merchant facing order management system, improving the everyday lives of many thousands of merchants. \\
-    Based on \textsc{Rails}, \textsc{AngularJS}, \textsc{Sinatra} (for API + OAuth 2) and a \textsc{Solr} search server.
+    Based on \textsc{Rails}, \textsc{AngularJS}, \textsc{Sinatra} (for API + OAuth 2) and \textsc{Solr} to enable searching up to 3 years of data.
   \item Took part in developing Klarna's first non-manual merchants onboarding system, allowing salesperson to focus on sales rather than paperwork.
 \end{itemize}}
 
-\cventry{2007--2009}{Software Developer}{\textsc{Kaltura}}{Ramat Gan}{}{Joined as the 3rd developer, built a video editing, management and streaming platform as well as \textsc{Python} based automation tools. }
-\cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Migrated an http polling based \textsc{Flash} gaming platform to work with Sockets against a Java EE backend. }
-\cventry{2003--2006}{Criminal Investigator \& Computer Forensics Analyst}{The Central Unit for Special Investigations}{\textsc{IDF} (mandatory regular service)}{}{Leading dozens of investigations of different crimes (frauds, thefts, weapons dealership, drugs and violence).
+\cventry{2007--2009}{Software Developer}{\textsc{Kaltura}}{Ramat Gan}{}{Joined as the 3rd developer,
+built a video editing, management and streaming platform using Flex/Actionscript as well as \textsc{Python} for automation. }
+\cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Scaled an existing gaming system by migrating its front-end from http polling to work against a Java EE backend using TCP sockets.}
+\cventry{2003--2006}{Criminal Investigator \& Computer Forensics Analyst}{The Central Unit for Special Investigations}{\textsc{IDF} (mandatory regular service)}{}{Leading and teaming on dozens of investigations ranging from frauds (few of which costed millions to the taxpayer), weapons theft, drug trade and violence.
 }
 %------------------------------------------------
 
