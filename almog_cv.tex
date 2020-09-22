@@ -58,7 +58,7 @@
 \email{akurtser@gmail.com}
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\extrainfo{additional information}
-\photo[60pt][4pt]{photos/almog} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\photo[60pt][4pt]{photos/almog} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"I actually think that I'm a rather optimistic and happy person; it's just that I'm not a very positive person, if you see the difference." - Linus Trovalds\newline{}}
 
 %----------------------------------------------------------------------------------------
@@ -170,16 +170,16 @@ By the end, I've climbed well over 489,418 feet in elevation through 25 National
 Shortly after that, I hiked the 683 mile long (1,100 km) Israel's National Trail.
 Last but not least I took on a semi-winter conditions traverse of the 500+ mile long Haute Randonnée Pyrénéenne (HRP),
 an unmarked high-route, stretching from the Atlantic to the Mediterranean.
-To the best of my knowledge, I've being the last person to have successfully started (and completed it) for that season in an unbroken-continuous-footpath.
+To the best of my knowledge, I've being the last person to have successfully started (and completed it) for the 2019 hiking season in an unbroken-continuous-footpath despite abrupt winter conditions.
 }
 
 \section{Experience}
 \cventry{11/2011--04/2018}{Software Developer}{\textsc{Klarna}}{Tel Aviv}{}{
-  Developed, delivered, operated and maintained high quality software, used by millions of consumers and many thousands of merchants:
+  Developed, delivered, operated and maintained high quality software, used by millions of consumers and every merchant using Klarna:
 \begin{itemize}
-  \item Built a (near) real-time data-enrichment service that matches partial textual transaction to categories and product images,
-    processing ~1M jobs/day while handling wildly varying throughput with minimal latency. \\
-    Enabled by \textsc{Kafka} + \textsc{Node.js}, \textsc{Jenkins} CI/CD pipeline, monitoring with \textsc{Graphite}/\textsc{Grafana}, deployed with \textsc{Docker} on AWS.
+  \item Built a (near) real-time distributed data-enrichment service that matches partial textual transaction to categories and product images,
+    processing ~1M data enrichments requests per day while handling wildly varying throughput with minimal latency. \\
+    Enabled by \textsc{Kafka} + \textsc{Node.js}, \textsc{Jenkins} CI/CD pipeline, monitoring with \textsc{Grafana} + \textsc{Prometheus}, deployed with \textsc{Docker} on AWS.
   \item Developed Klarna's largest consumer facing system - started as classic RoR and evolved into a \textsc{React} Single Page App + \textsc{Rails} backed API, serving and aggregating content from dozens of microservices.
   \item Designed and developed Klarna's merchant facing order management system, improving the everyday lives of many thousands of merchants. \\
     Based on \textsc{Rails}, \textsc{AngularJS}, \textsc{Sinatra} (for API + OAuth 2) and \textsc{Solr} to enable searching up to 3 years of data.
@@ -188,7 +188,7 @@ To the best of my knowledge, I've being the last person to have successfully sta
 
 \cventry{2007--2009}{Software Developer}{\textsc{Kaltura}}{Ramat Gan}{}{Joined as the 3rd developer,
 built a video editing, management and streaming platform using Flex/Actionscript as well as \textsc{Python} for automation. }
-\cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Scaled an existing gaming system by migrating its front-end from http polling to work against a Java EE backend using TCP sockets.}
+\cventry{2006--2007}{Software Developer}{\textsc{Zone4Play}}{Tel Aviv}{}{Refactored an existing gaming system by migrating its front-end from http polling to work against a Java EE backend using TCP sockets, enabling code reuse and and making efficient use of network resources that resulted in 50\% decrease in overall backend resources usage which led to reduced operational cost.}
 \cventry{2003--2006}{Criminal Investigator \& Computer Forensics Analyst}{The Central Unit for Special Investigations}{\textsc{IDF} (mandatory regular service)}{}{Leading and teaming on dozens of investigations ranging from frauds (few of which costed millions to the taxpayer), weapons theft, drug trade and violence.
 }
 %------------------------------------------------
@@ -197,32 +197,24 @@ built a video editing, management and streaming platform using Flex/Actionscript
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Software Devlopment skills}
+\section{Recently used languages/technologies}
 
-\cvitem{Basic}{\textsc{Haskell}, \LaTeX, \textsc{Postgres}, \textsc{React}, \textsc{Redis}}
-\cvitem{Intermediate}{\textsc{Python3}, (modern) \textsc{Javascript}, \textsc{Node.js}, \textsc{Linux}, \textsc{Vim}, \textsc{Jenkins}, \textsc{Docker}, \textsc{AWS}, \textsc{Chef}}
-\cvitem{Advanced}{\textsc{Ruby}, \textsc{Git}}
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Languages}
-
-\cvitemwithcomment{English}{Native or bilingual proficiency}{}
-\cvitemwithcomment{Hebrew}{Native or bilingual proficiency}{}
+\cvitem{Control plane}{\textsc{Python}, \textsc{Ruby}, \textsc{(modern) JS/Node}, \textsc{Bash}, \LaTeX, \textsc{Haskell}, \textsc{Docker}, \textsc{Jenkins}}
+\cvitem{Data plane}{\textsc{Postgresql}, \textsc{Redis}, \textsc{Kafka}}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Interests}
+\section{Areas of interest}
 
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
-\cvlistdoubleitem{Bread baking}{Cooking}
+\cvlistdoubleitem{Distributed systems}{Competitive programming}
 \cvlistdoubleitem{Long distance hiking}{Trail running}
-\cvlistitem{Fantasy \& Sci-Fi}
+\cvlistdoubleitem{Fantasy \& Sci-Fi}{Woodworking}
+\cvlistitem{Using sourdough to make friends and enemeies alike}
+\cvlistitem{Seamstering (mostly under the pretext of manufacturing hiking gear)}
 
 %----------------------------------------------------------------------------------------
 
@@ -233,6 +225,15 @@ built a video editing, management and streaming platform using Flex/Actionscript
 \section{Volunteering}
 \cventry{2014-2017}{Herzelia Loves Animals}{}{}{}{Rescuing, fostering and finding new homes for stray dogs}
 %----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Native or bilingual proficiency}{}
+\cvitemwithcomment{Hebrew}{Native or bilingual proficiency}{}
 
 
 %----------------------------------------------------------------------------------------
